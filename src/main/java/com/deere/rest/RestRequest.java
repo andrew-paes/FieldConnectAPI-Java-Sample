@@ -181,12 +181,12 @@ public class RestRequest {
     }
 
     private boolean isProxySetInSystemProperties() {
-        return Boolean.valueOf(getProperty("http.proxySet", "true"));
+        return Boolean.valueOf(getProperty("http.proxySet", "false"));
     }
 
     private Proxy proxyFromSystemProperties() {
         final String proxyHost = getProperty("Host", "Host_URL");
-        final Integer proxyPort = valueOf(getProperty("http.proxyPort", "Posr"));
+        final Integer proxyPort = valueOf(getProperty("http.proxyPort", "Port"));
         return new Proxy(Proxy.Type.HTTP, new InetSocketAddress(proxyHost, proxyPort));
     }
 

@@ -9,9 +9,7 @@ public class FieldConnectInfo extends AbstractApiBase {
 
     public static void main(String[] arg ) throws Exception{
 
-        String userName = "Enter user name";
-
-        final RestRequest restRequest = oauthRequestTo("https://apicert.soa-proxy.deere.com:443/fc/users/"+userName+"/organizations")
+        final RestRequest restRequest = oauthRequestTo("https://apicert.soa-proxy.deere.com:443/fc/organizations")
 
                 .method("GET")
                 .addHeader(new HttpHeader("Accept", "application/vnd.deere.axiom.v3+json"))
